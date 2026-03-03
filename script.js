@@ -1,4 +1,4 @@
-// PECERAS Y MUEBLES PUEBLA - script.js (versión estable)
+// PECERAS Y MUEBLES PUEBLA - script.js (versión estable + reveal + wa fix)
 
 (function () {
   "use strict";
@@ -55,13 +55,11 @@
     const waUrl = https://wa.me/${number}?text=${message};
 
     waBtns.forEach((btn) => {
-      // Si es <a>, le ponemos href
       if (btn.tagName.toLowerCase() === "a") {
         btn.setAttribute("href", waUrl);
         btn.setAttribute("target", "_blank");
         btn.setAttribute("rel", "noopener noreferrer");
       } else {
-        // Si es button u otro elemento, lo abrimos con click
         btn.addEventListener("click", () => window.open(waUrl, "_blank", "noopener,noreferrer"));
         btn.style.cursor = "pointer";
       }
@@ -75,12 +73,41 @@
       if (!href || href === "#") return;
 
       const target = document.querySelector(href);
-      if (!target) return; // si no existe esa sección, no hacemos nada
+      if (!target) return;
 
       e.preventDefault();
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
+
+  // 6) Reveal animations (activa .reveal -> .reveal.is-in)
+  const revealEls = $$(".reveal");
+
+  // Si no hay elementos, no hacemos nada
+  if (revealEls.length) {
+    // Fallback: si el navegador no soporta IntersectionObserver, mostramos todo
+    if (!("IntersectionObserver" in window)) {
+      revealEls.forEach((el) => el.classList.add("is-in"));
+    } else {
+      const io = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-in");
+              observer.unobserve(entry.target); // una sola vez
+            }
+          });
+        },
+        {
+          root: null,
+          threshold: 0.12,
+          rootMargin: "0px 0px -10% 0px",
+        }
+      );
+
+      revealEls.forEach((el) => io.observe(el));
+    }
+  }
 
   // Nota: NO ocultamos nada con JS. Si algo está oculto, es CSS.
 })();
