@@ -1,29 +1,32 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#0b1220" />
 
+  <!-- SEO (se puede sobreescribir desde config.js si tú lo haces en script.js) -->
   <title>Peceras & Muebles Puebla</title>
-  <meta name="description" content="Peceras personalizadas y muebles a medida. Cotiza rápido por WhatsApp." />
+  <meta name="description" content="Peceras a medida en Puebla con instalación profesional, mantenimiento y muebles funcionales. Cotiza rápido por WhatsApp." />
 
-  <!-- Opcional: si no tienes favicon, puedes borrar estas 2 líneas -->
- <link rel="icon" type="image/png" href="favicon.png" />
-<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <!-- Open Graph básico -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Peceras & Muebles Puebla" />
+  <meta property="og:description" content="Diseño, fabricación e instalación de peceras a medida + muebles funcionales. Atención por WhatsApp." />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Tip: si NO vas a subir íconos todavía, NO pongas links a favicon para evitar 404 -->
+  <!-- Cuando los tengas: sube a /assets/icons/ y descomenta -->
+  <!--
+  <link rel="icon" href="./assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+  -->
+
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body id="top">
-  <!-- BG decorativo (NO debe tapar contenido) -->
-  <div class="bg" aria-hidden="true">
-    <div class="bg__blob bg__blob--a"></div>
-    <div class="bg__blob bg__blob--b"></div>
-    <div class="bg__noise"></div>
-  </div>
 
+  <!-- Header -->
   <header class="header">
     <div class="container header__inner">
       <a class="brand" href="#top" aria-label="Ir al inicio">
@@ -43,62 +46,69 @@
       <div class="header__cta">
         <a class="btn btn--ghost" href="#paquetes">Ver paquetes</a>
         <a class="btn btn--primary" href="#" data-wa="1">Cotizar</a>
-        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
       </div>
+
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false">
+        <span class="menu-btn__icon" aria-hidden="true"></span>
+      </button>
     </div>
 
     <!-- Mobile menu -->
-    <div class="mobile" id="mobileMenu" aria-hidden="true">
-      <div class="mobile__panel">
-        <a href="#servicios">Servicios</a>
-        <a href="#proceso">Proceso</a>
-        <a href="#portafolio">Portafolio</a>
-        <a href="#paquetes">Paquetes</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contacto">Contacto</a>
+    <div class="mobile" id="mobileMenu">
+      <div class="mobile__inner">
+        <a class="mobile__link" href="#servicios">Servicios</a>
+        <a class="mobile__link" href="#proceso">Proceso</a>
+        <a class="mobile__link" href="#portafolio">Portafolio</a>
+        <a class="mobile__link" href="#paquetes">Paquetes</a>
+        <a class="mobile__link" href="#faq">FAQ</a>
+        <a class="mobile__link" href="#contacto">Contacto</a>
+
         <div class="mobile__cta">
-          <a class="btn btn--primary btn--full" href="#" data-wa="1">Cotizar por WhatsApp</a>
+          <a class="btn btn--ghost" href="#paquetes">Ver paquetes</a>
+          <a class="btn btn--primary" href="#" data-wa="1">Cotizar por WhatsApp</a>
         </div>
       </div>
     </div>
   </header>
 
+  <!-- Main -->
   <main>
+
     <!-- HERO -->
     <section class="hero">
       <div class="container hero__inner">
         <div class="hero__copy reveal">
           <div class="pill">
             <span data-location="coverage">Puebla y alrededores</span>
-            <span class="dot"></span>
-            Atención directa por WhatsApp
+            <span class="dot">•</span>
+            Respuesta rápida por WhatsApp
           </div>
 
           <h1 class="h1">
-            Peceras personalizadas y muebles a medida
+            Peceras a medida en Puebla con instalación profesional y mantenimiento
           </h1>
 
           <p class="lead">
             Diseñamos, fabricamos e instalamos peceras residenciales y comerciales,
-            además de muebles funcionales con acabados de calidad.
+            además de muebles funcionales resistentes a humedad y uso constante.
+            Cotización rápida y atención directa por WhatsApp.
           </p>
 
           <div class="hero__buttons">
-            <a class="btn btn--primary" href="#" data-wa="1">Solicitar cotización</a>
+            <a class="btn btn--primary" href="#" data-wa="1">Cotizar ahora por WhatsApp</a>
             <a class="btn btn--ghost" href="#portafolio">Ver trabajos</a>
           </div>
 
           <div class="chips">
-            <span class="chip">A la medida</span>
-            <span class="chip">Instalación y mantenimiento</span>
-            <span class="chip">Atención en Puebla</span>
+            <span class="chip">Fabricación personalizada</span>
+            <span class="chip">Instalación profesional</span>
+            <span class="chip">Servicio en Puebla</span>
           </div>
         </div>
 
         <aside class="panel reveal" aria-label="Beneficios">
           <div class="panel__title" data-brand="name">Peceras &amp; Muebles Puebla</div>
+
           <div class="panel__grid">
             <div class="panel__item">
               <div class="panel__k">Calidad</div>
@@ -113,7 +123,14 @@
               <div class="panel__v">Atención directa por WhatsApp</div>
             </div>
           </div>
-          <div class="panel__quote">“Cotiza en minutos.”</div>
+
+          <div class="panel__quote">
+            “Cotiza en minutos.”
+          </div>
+
+          <div class="panel__cta">
+            <a class="btn btn--primary btn--full" href="#" data-wa="1">Solicitar cotización</a>
+          </div>
         </aside>
       </div>
     </section>
@@ -122,9 +139,9 @@
     <section class="section" id="servicios">
       <div class="container">
         <h2 class="h2 reveal">Servicios</h2>
-        <p class="muted reveal">Soluciones claras para casa, oficina o negocio. Todo a la medida.</p>
+        <p class="sub reveal">Soluciones claras para casa, oficina o negocio. Todo a la medida.</p>
 
-        <div class="grid3">
+        <div class="grid3" id="grid3">
           <article class="card reveal">
             <h3>Peceras personalizadas</h3>
             <p>Fabricación a la medida según espacio, estilo y tipo de instalación.</p>
@@ -133,26 +150,29 @@
               <li>Asesoría por tamaño y ubicación</li>
               <li>Acabados limpios y seguros</li>
             </ul>
+            <a class="link" href="#" data-wa="1">Cotizar este servicio</a>
           </article>
 
           <article class="card reveal">
             <h3>Instalación y mantenimiento</h3>
-            <p>Instalación profesional, limpieza, reparación y ajustes para mantenerlo óptimo.</p>
+            <p>Instalación profesional, limpieza, reparación y ajustes para óptimas condiciones.</p>
             <ul class="list">
               <li>Instalación en domicilio</li>
               <li>Mantenimiento programado</li>
               <li>Reparaciones y mejoras</li>
             </ul>
+            <a class="link" href="#" data-wa="1">Agendar por WhatsApp</a>
           </article>
 
           <article class="card reveal">
             <h3>Muebles a medida</h3>
-            <p>Muebles funcionales para tu espacio: soportes, bases, decorativos y soluciones prácticas.</p>
+            <p>Muebles funcionales para tu espacio: bases, soportes, decoración y soluciones prácticas.</p>
             <ul class="list">
               <li>Diseño según tu necesidad</li>
-              <li>Acabados y materiales a elección</li>
+              <li>Materiales a elección</li>
               <li>Enfoque en durabilidad</li>
             </ul>
+            <a class="link" href="#" data-wa="1">Pedir cotización</a>
           </article>
         </div>
       </div>
@@ -162,40 +182,33 @@
     <section class="section" id="proceso">
       <div class="container">
         <h2 class="h2 reveal">Cómo trabajamos</h2>
-        <p class="muted reveal">Proceso claro y sencillo.</p>
+        <p class="sub reveal">Proceso claro y sencillo, sin sorpresas.</p>
 
-        <div class="steps">
+        <div class="steps" id="steps">
           <div class="step reveal">
             <div class="step__n">1</div>
-            <div>
-              <div class="step__t">Contacto</div>
-              <div class="step__d">Nos compartes tu necesidad y ubicación.</div>
-            </div>
+            <div class="step__t">Contacto</div>
+            <div class="step__d">Nos compartes tu idea, medidas y ubicación.</div>
           </div>
-
           <div class="step reveal">
             <div class="step__n">2</div>
-            <div>
-              <div class="step__t">Cotización</div>
-              <div class="step__d">Recibes propuesta clara y opciones.</div>
-            </div>
+            <div class="step__t">Cotización</div>
+            <div class="step__d">Recibes propuesta clara con opciones y tiempos.</div>
           </div>
-
           <div class="step reveal">
             <div class="step__n">3</div>
-            <div>
-              <div class="step__t">Ejecución</div>
-              <div class="step__d">Realizamos el trabajo acordado.</div>
-            </div>
+            <div class="step__t">Ejecución</div>
+            <div class="step__d">Fabricación e instalación con materiales acordados.</div>
           </div>
-
           <div class="step reveal">
             <div class="step__n">4</div>
-            <div>
-              <div class="step__t">Entrega</div>
-              <div class="step__d">Revisión final y confirmación.</div>
-            </div>
+            <div class="step__t">Entrega</div>
+            <div class="step__d">Revisión final y confirmación de satisfacción.</div>
           </div>
+        </div>
+
+        <div class="center reveal" style="margin-top:18px">
+          <a class="btn btn--primary" href="#" data-wa="1">Iniciar cotización</a>
         </div>
       </div>
     </section>
@@ -204,15 +217,39 @@
     <section class="section" id="portafolio">
       <div class="container">
         <h2 class="h2 reveal">Portafolio</h2>
-        <p class="muted reveal">Aquí puedes poner fotos reales después. Por ahora dejamos placeholders.</p>
+        <p class="sub reveal">Ejemplos. Podemos ajustar diseño, materiales y tamaño.</p>
 
-        <div class="gallery">
-          <div class="shot reveal">Proyecto 1</div>
-          <div class="shot reveal">Proyecto 2</div>
-          <div class="shot reveal">Proyecto 3</div>
-          <div class="shot reveal">Proyecto 4</div>
-          <div class="shot reveal">Proyecto 5</div>
-          <div class="shot reveal">Proyecto 6</div>
+        <div class="grid3">
+          <article class="work reveal">
+            <div class="work__thumb" aria-hidden="true"></div>
+            <div class="work__body">
+              <h3>Pecera residencial</h3>
+              <p>Diseño limpio, acabados premium y estética minimalista.</p>
+              <a class="link" href="#" data-wa="1">Quiero una similar</a>
+            </div>
+          </article>
+
+          <article class="work reveal">
+            <div class="work__thumb" aria-hidden="true"></div>
+            <div class="work__body">
+              <h3>Base y mueble funcional</h3>
+              <p>Soporte sólido, espacios útiles y materiales resistentes.</p>
+              <a class="link" href="#" data-wa="1">Cotizar mueble</a>
+            </div>
+          </article>
+
+          <article class="work reveal">
+            <div class="work__thumb" aria-hidden="true"></div>
+            <div class="work__body">
+              <h3>Mantenimiento programado</h3>
+              <p>Limpieza, ajustes y recomendaciones para mejor desempeño.</p>
+              <a class="link" href="#" data-wa="1">Agendar mantenimiento</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="note reveal">
+          Tip: cuando tengas fotos reales, las reemplazamos por imágenes y queda 10/10.
         </div>
       </div>
     </section>
@@ -221,7 +258,7 @@
     <section class="section" id="paquetes">
       <div class="container">
         <h2 class="h2 reveal">Paquetes</h2>
-        <p class="muted reveal">Opciones adaptables a cada necesidad. (Precios se confirman por WhatsApp.)</p>
+        <p class="sub reveal">Opciones adaptables a cada necesidad.</p>
 
         <div class="pricing">
           <article class="price reveal">
@@ -229,17 +266,18 @@
             <ul class="list">
               <li>Servicio principal</li>
               <li>Entrega acordada</li>
-              <li>Soporte básico</li>
+              <li>Soporte por WhatsApp</li>
             </ul>
             <a class="btn btn--ghost btn--full" href="#" data-wa="1">Cotizar</a>
           </article>
 
           <article class="price price--featured reveal">
+            <div class="badge">Recomendado</div>
             <h3>Plus</h3>
             <ul class="list">
               <li>Incluye instalación</li>
               <li>Atención prioritaria</li>
-              <li>Seguimiento</li>
+              <li>Ajustes finales</li>
             </ul>
             <a class="btn btn--primary btn--full" href="#" data-wa="1">Cotizar</a>
           </article>
@@ -249,7 +287,7 @@
             <ul class="list">
               <li>Servicio completo</li>
               <li>Seguimiento adicional</li>
-              <li>Personalización avanzada</li>
+              <li>Mantenimiento inicial</li>
             </ul>
             <a class="btn btn--ghost btn--full" href="#" data-wa="1">Cotizar</a>
           </article>
@@ -260,23 +298,27 @@
     <!-- FAQ -->
     <section class="section" id="faq">
       <div class="container">
-        <h2 class="h2 reveal">FAQ</h2>
+        <h2 class="h2 reveal">Preguntas frecuentes</h2>
 
         <div class="faq">
           <details class="faq__item reveal">
-            <summary>¿En qué zonas trabajas?</summary>
-            <p>Trabajamos en <strong>Puebla y alrededores</strong>. Si estás fuera, pregunta por disponibilidad.</p>
+            <summary>¿Trabajan solo en Puebla?</summary>
+            <p>Principalmente <strong><span data-location="coverage">Puebla y alrededores</span></strong>. Si estás en otra zona, consúltanos y revisamos viabilidad.</p>
           </details>
 
           <details class="faq__item reveal">
-            <summary>¿Tienen local físico?</summary>
-            <p>De momento no. La atención es por WhatsApp y visitas a domicilio según el proyecto.</p>
+            <summary>¿Cómo se calcula la cotización?</summary>
+            <p>Depende de medidas, diseño, materiales, tipo de instalación y ubicación. Por WhatsApp te pedimos datos mínimos y te damos opciones.</p>
           </details>
 
           <details class="faq__item reveal">
-            <summary>¿Cómo se define el precio?</summary>
-            <p>Depende de medidas, materiales, complejidad e instalación. Te cotizamos rápido por WhatsApp.</p>
+            <summary>¿Hacen mantenimiento?</summary>
+            <p>Sí: limpieza, ajustes, reparación y mantenimiento programado. También podemos recomendarte rutina de cuidado.</p>
           </details>
+        </div>
+
+        <div class="center reveal" style="margin-top:18px">
+          <a class="btn btn--primary" href="#" data-wa="1">Resolver dudas por WhatsApp</a>
         </div>
       </div>
     </section>
@@ -285,61 +327,58 @@
     <section class="section" id="contacto">
       <div class="container">
         <h2 class="h2 reveal">Contáctanos</h2>
-        <p class="muted reveal">
-          Atención en <span data-location="coverage">Puebla y alrededores</span>.
-          Respuesta rápida por WhatsApp.
-        </p>
+        <p class="sub reveal">Atención en <span data-location="coverage">Puebla y alrededores</span>. Sin local físico (trabajo desde casa) y servicio a domicilio.</p>
 
-        <div class="contact reveal">
-          <div class="contact__card">
-            <div class="contact__k">WhatsApp</div>
-            <div class="contact__v" data-wa-label>+52 221 281 0388</div>
-            <a class="btn btn--primary btn--full" href="#" data-wa="1">Escribir por WhatsApp</a>
+        <div class="contact">
+          <div class="contact__card reveal">
+            <h3>WhatsApp</h3>
+            <p>Respuesta rápida para cotización, dudas y agenda.</p>
+            <a class="btn btn--primary" href="#" data-wa="1">Escribir por WhatsApp</a>
+            <p class="muted" style="margin-top:10px">
+              Horario sugerido: Lun–Sáb (confirmar).
+            </p>
           </div>
 
-          <div class="contact__card">
-            <div class="contact__k">Horario</div>
-            <div class="contact__v">Lunes a Sábado</div>
-            <div class="contact__v muted">Citas y visitas según agenda</div>
-          </div>
-
-          <div class="contact__card">
-            <div class="contact__k">Notas</div>
-            <div class="contact__v muted">
-              Envíanos: medidas aproximadas, ubicación y una foto del espacio.
-            </div>
+          <div class="contact__card reveal">
+            <h3>Datos</h3>
+            <ul class="list">
+              <li><strong>Marca:</strong> <span data-brand="name">Peceras &amp; Muebles Puebla</span></li>
+              <li><strong>Cobertura:</strong> <span data-location="coverage">Puebla y alrededores</span></li>
+              <li><strong>Atención:</strong> WhatsApp</li>
+            </ul>
+            <a class="btn btn--ghost" href="#top">Volver arriba</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Floating WhatsApp -->
-    <a class="wa-float" href="#" data-wa="1" aria-label="Abrir WhatsApp">
-      <span class="wa-dot" aria-hidden="true"></span>
-      WhatsApp
-    </a>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
-      <div>
+      <div class="footer__left">
         <strong data-brand="name">Peceras &amp; Muebles Puebla</strong>
-        <div class="muted">© <span id="year">2026</span></div>
+        <span class="dot">•</span>
+        <span>© <span id="year">2026</span></span>
       </div>
 
-      <div class="footer__links">
-        <a href="#top">Inicio</a>
-        <a href="#servicios">Servicios</a>
+      <div class="footer__right">
+        <a href="#faq">FAQ</a>
         <a href="#contacto">Contacto</a>
       </div>
     </div>
   </footer>
 
-  <!-- Config SIEMPRE antes de script.js -->
-  <script src="assets/config.js"></script>
-  <script src="script.js"></script>
+  <!-- WhatsApp flotante -->
+  <a class="wa-float" href="#" data-wa="1" aria-label="Cotizar por WhatsApp">
+    <span class="wa-dot" aria-hidden="true"></span>
+    WhatsApp
+  </a>
+
+  <!-- Config + Script -->
+  <!-- OJO: tu config está en assets -->
+  <script src="./assets/config.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
-
-
-
