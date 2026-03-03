@@ -1,7 +1,7 @@
 window.SITE_CONFIG = {
   brand: {
     name: "Peceras & Muebles Puebla",
-    shortMark: "PM", // 2 letras
+    shortMark: "PM",
   },
   location: {
     city: "Puebla",
