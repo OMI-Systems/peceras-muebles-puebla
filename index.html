@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OMI Systems | Tecnología práctica para negocios reales</title>
+  <meta name="description" content="OMI Systems: Web, Automatización e IA para negocios reales. Presencia digital profesional y sistemas prácticos sin complicaciones." />
+  <meta name="theme-color" content="#0b1220" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Floating WhatsApp -->
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Cotizar por WhatsApp">
+    <span class="wa-dot"></span>
+    WhatsApp
+  </a>
+
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <span class="brand__mark">OMI</span>
+        <span class="brand__name">Systems</span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header__cta">
+        <a class="btn btn--ghost" href="#paquetes">Ver paquetes</a>
+        <a class="btn btn--primary" id="waTop" href="#" target="_blank" rel="noopener">Cotizar</a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" aria-hidden="true">
+      <div class="container mobile__inner">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn--primary mobile__btn" id="waMobile" href="#" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__left">
+          <p class="badge reveal">Ecosistema híbrido: Web + Automatización + IA</p>
+
+          <h1 class="reveal">
+            Tecnología práctica para <span class="accent">negocios reales</span>
+          </h1>
+
+          <p class="lead reveal">
+            Construimos presencia digital profesional, automatizamos tareas repetitivas y creamos soluciones inteligentes sin complicaciones.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary" id="waHero" href="#" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+            <a class="btn btn--ghost" href="#portafolio">Ver portafolio</a>
+          </div>
+
+          <div class="hero__bullets reveal">
+            <div class="pill">Entrega rápida</div>
+            <div class="pill">Sin mensualidades obligatorias</div>
+            <div class="pill">Enfoque 100% práctico</div>
+          </div>
+        </div>
+
+        <div class="hero__right reveal" aria-hidden="true">
+          <div class="panel">
+            <div class="panel__top">
+              <div class="dot dot--r"></div>
+              <div class="dot dot--y"></div>
+              <div class="dot dot--g"></div>
+              <div class="panel__title">OMI Systems</div>
+            </div>
+
+            <div class="panel__body">
+              <div class="stat">
+                <div class="stat__k">Web</div>
+                <div class="stat__v">Presencia que convierte</div>
+              </div>
+              <div class="stat">
+                <div class="stat__k">Automate</div>
+                <div class="stat__v">Menos manual, más control</div>
+              </div>
+              <div class="stat">
+                <div class="stat__k">Assist</div>
+                <div class="stat__v">IA práctica en operación</div>
+              </div>
+
+              <div class="panel__hint">
+                “Menos fricción, más resultados.”
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="reveal">Servicios</h2>
+          <p class="muted reveal">Tres líneas claras. Un solo objetivo: que tu negocio opere y venda mejor.</p>
+        </div>
+
+        <div class="grid3">
+          <article class="card reveal">
+            <h3>OMI Web</h3>
+            <p>Páginas profesionales enfocadas en contacto directo (WhatsApp, llamadas, formularios) y confianza.</p>
+            <ul class="list">
+              <li>Landing / sitio breve</li>
+              <li>Galería y casos</li>
+              <li>Optimización móvil</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3>OMI Automate</h3>
+            <p>Automatización simple y efectiva: captura de datos, reportes, carpetas, seguimiento y control.</p>
+            <ul class="list">
+              <li>Formularios inteligentes</li>
+              <li>Flujos y reportes</li>
+              <li>Orden operativo</li>
+            </ul>
+          </article>
+
+          <article class="card reveal">
+            <h3>OMI Assist</h3>
+            <p>Asistentes/bots para tareas internas: respuestas, consultas, organización y soporte operativo.</p>
+            <ul class="list">
+              <li>Respuestas rápidas</li>
+              <li>Soporte interno</li>
+              <li>IA aplicada</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="section section--alt" id="proceso">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="reveal">Cómo trabajamos</h2>
+          <p class="muted reveal">Claro, rápido y sin vueltas. Esto evita retrasos y malentendidos.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <div class="step__n">1</div>
+            <div class="step__c">
+              <h3>Diagnóstico rápido</h3>
+              <p>Entendemos tu objetivo y lo que necesitas (15–30 min).</p>
+            </div>
+          </div>
+
+          <div class="step reveal">
+            <div class="step__n">2</div>
+            <div class="step__c">
+              <h3>Propuesta clara</h3>
+              <p>Alcance definido, tiempos y entregables sin tecnicismos.</p>
+            </div>
+          </div>
+
+          <div class="step reveal">
+            <div class="step__n">3</div>
+            <div class="step__c">
+              <h3>Construcción + revisión</h3>
+              <p>Te mostramos avances y ajustamos con cambios controlados.</p>
+            </div>
+          </div>
+
+          <div class="step reveal">
+            <div class="step__n">4</div>
+            <div class="step__c">
+              <h3>Entrega + soporte</h3>
+              <p>Publicación y soporte opcional para mantenerlo al día.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section class="section" id="portafolio">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="reveal">Portafolio</h2>
+          <p class="muted reveal">Arrancamos con demos. Aquí irán tus casos reales (peceras, carpintería, talleres, etc.).</p>
+        </div>
+
+        <div class="grid3">
+          <article class="case reveal">
+            <div class="case__tag">Demo 01</div>
+            <h3>Negocio local</h3>
+            <p class="muted">Problema: no tenía presencia digital clara.</p>
+            <p><strong>Solución:</strong> landing con galería + WhatsApp.</p>
+            <p><strong>Resultado:</strong> más mensajes y mejor confianza.</p>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__tag">Demo 02</div>
+            <h3>Servicios técnicos</h3>
+            <p class="muted">Problema: cotizaciones lentas y desorden.</p>
+            <p><strong>Solución:</strong> formulario + seguimiento simple.</p>
+            <p><strong>Resultado:</strong> menos fricción y más cierre.</p>
+          </article>
+
+          <article class="case reveal">
+            <div class="case__tag">Demo 03</div>
+            <h3>Fabricación / taller</h3>
+            <p class="muted">Problema: trabajos sin evidencia/orden.</p>
+            <p><strong>Solución:</strong> estructura de reportes y carpeta.</p>
+            <p><strong>Resultado:</strong> control y presentación pro.</p>
+          </article>
+        </div>
+
+        <div class="center reveal">
+          <a class="btn btn--ghost" href="#contacto">Quiero un proyecto así</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paquetes -->
+    <section class="section section--alt" id="paquetes">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="reveal">Paquetes</h2>
+          <p class="muted reveal">Tres opciones para que el cliente decida rápido. Sin enredos.</p>
+        </div>
+
+        <div class="pricing">
+          <article class="price reveal">
+            <h3>Starter</h3>
+            <p class="muted">Para presencia rápida y profesional</p>
+            <div class="price__line"></div>
+            <ul class="list">
+              <li>Landing one-page</li>
+              <li>Botón WhatsApp</li>
+              <li>Sección servicios</li>
+              <li>Entrega funcional</li>
+            </ul>
+            <a class="btn btn--ghost price__btn" href="#contacto">Solicitar</a>
+          </article>
+
+          <article class="price price--featured reveal">
+            <div class="price__badge">Recomendado</div>
+            <h3>Pro</h3>
+            <p class="muted">Más completo, más confianza</p>
+            <div class="price__line"></div>
+            <ul class="list">
+              <li>Todo Starter</li>
+              <li>Proceso + Portafolio</li>
+              <li>FAQ para objeciones</li>
+              <li>Optimización móvil</li>
+            </ul>
+            <a class="btn btn--primary price__btn" id="waPricing" href="#" target="_blank" rel="noopener">Cotizar Pro</a>
+          </article>
+
+          <article class="price reveal">
+            <h3>Ecosystem</h3>
+            <p class="muted">Web + automatización simple</p>
+            <div class="price__line"></div>
+            <ul class="list">
+              <li>Todo Pro</li>
+              <li>Form / flujo básico</li>
+              <li>Entrega con guía</li>
+              <li>Soporte inicial</li>
+            </ul>
+            <a class="btn btn--ghost price__btn" href="#contacto">Solicitar</a>
+          </article>
+        </div>
+
+        <p class="fine reveal">
+          *Publicamos en una plataforma estable sin pagos mensuales obligatorios. Dominio propio: opcional.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="reveal">Preguntas frecuentes</h2>
+          <p class="muted reveal">Respuestas directas, sin tecnicismos.</p>
+        </div>
+
+        <div class="faq">
+          <button class="faq__q reveal" type="button">
+            <span>¿Cuánto tarda un proyecto?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__a">
+            Normalmente 7–10 días hábiles para un sitio simple, dependiendo de fotos y contenido.
+          </div>
+
+          <button class="faq__q reveal" type="button">
+            <span>¿Necesito saber de tecnología?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__a">
+            No. Tú solo compartes información básica y fotos. Nosotros dejamos todo listo.
+          </div>
+
+          <button class="faq__q reveal" type="button">
+            <span>¿Puedo cambiar fotos y textos después?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__a">
+            Sí. Podemos hacerlo por ajuste puntual o con mantenimiento mensual opcional.
+          </div>
+
+          <button class="faq__q reveal" type="button">
+            <span>¿Incluye dominio?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__a">
+            Es opcional. Si quieres un .com/.mx, se configura y queda a tu nombre.
+          </div>
+
+          <button class="faq__q reveal" type="button">
+            <span>¿Qué necesitas de mí para comenzar?</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__a">
+            Nombre del negocio, WhatsApp, zona de trabajo, servicios y fotos (aunque sean del celular).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section section--alt" id="contacto">
+      <div class="container">
+        <div class="contact">
+          <div class="contact__left reveal">
+            <h2>Hablemos</h2>
+            <p class="muted">
+              Zona: <strong id="cityText">Saltillo, Coahuila</strong><br/>
+              Canal principal: WhatsApp
+            </p>
+
+            <div class="contact__actions">
+              <a class="btn btn--primary" id="waContact" href="#" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+              <a class="btn btn--ghost" href="#top">Volver arriba</a>
+            </div>
+
+            <p class="fine">
+              Si ya tienes idea: manda ubicación + tipo de proyecto y te respondemos con pasos y propuesta.
+            </p>
+          </div>
+
+          <form class="form reveal" id="leadForm">
+            <h3>Mensaje rápido</h3>
+            <label>
+              Nombre
+              <input required name="name" type="text" placeholder="Tu nombre" />
+            </label>
+            <label>
+              Teléfono
+              <input required name="phone" type="tel" placeholder="Tu número" />
+            </label>
+            <label>
+              Mensaje
+              <textarea required name="message" rows="4" placeholder="Qué necesitas (Web / Automatización / Asistente)"></textarea>
+            </label>
+
+            <button class="btn btn--primary" type="submit">Enviar</button>
+            <p class="fine" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="brandline">
+          <span class="brand_mark">OMI</span><span class="brand_name">Systems</span>
+        </div>
+        <p class="muted">Tecnología práctica para negocios reales.</p>
+      </div>
+
+      <div class="footer__meta">
+        <p class="muted">© <span id="year"></span> OMI Systems</p>
+        <p class="muted">Saltillo, Coahuila</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
