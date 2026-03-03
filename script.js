@@ -52,7 +52,7 @@
   if (waBtns.length && cfg?.whatsapp?.number) {
     const number = String(cfg.whatsapp.number).replace(/\D/g, "");
     const message = encodeURIComponent(cfg.whatsapp.message || "Hola, quiero una cotización.");
-    const waUrl = https://wa.me/${number}?text=${message};
+    const waUrl = ´https://wa.me/${number}?text=${message}´;
 
     waBtns.forEach((btn) => {
       if (btn.tagName.toLowerCase() === "a") {
@@ -111,4 +111,5 @@
 
   // Nota: NO ocultamos nada con JS. Si algo está oculto, es CSS.
 })();
+
 
