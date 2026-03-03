@@ -1,29 +1,37 @@
-// =========================
-// OMI Systems - Settings
-// =========================
-const OMI = {
-  whatsapp: "522229047268",
-  city: "Saltillo, Coahuila",
+const BRAND = {
+  businessName: "Peceras & Muebles Puebla",
+  whatsapp: "522212810388",
+  city: "Puebla y alrededores",
   waMessage:
-    "Hola, quiero una cotización. Mi negocio es: _. Estoy en: ___. Busco: Web / Automatización / Asistente."
+    "Hola, quiero una cotización. Busco: Pecera / Mueble / Mantenimiento. Estoy en: _. Medidas aproximadas: __. Presupuesto: ___."
 };
 
-// Build WhatsApp links
 function buildWaLink() {
-  const text = encodeURIComponent(OMI.waMessage);
-  return https://wa.me/${OMI.whatsapp}?text=${text};
+  const text = encodeURIComponent(BRAND.waMessage);
+  return https://wa.me/${BRAND.whatsapp}?text=${text};
 }
 
 function setLinks() {
   const link = buildWaLink();
-  const ids = ["waFloat", "waTop", "waHero", "waMobile", "waPricing", "waContact"];
+  const ids = [
+    "waFloat",
+    "waTop",
+    "waHero",
+    "waMobile",
+    "waPricing",
+    "waPricing2",
+    "waPricing3",
+    "waContact",
+    "waPortafolio"
+  ];
+
   ids.forEach((id) => {
     const el = document.getElementById(id);
     if (el) el.href = link;
   });
 
   const cityEl = document.getElementById("cityText");
-  if (cityEl) cityEl.textContent = OMI.city;
+  if (cityEl) cityEl.textContent = BRAND.city;
 
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -43,7 +51,6 @@ function setupMobileMenu() {
 
   btn.addEventListener("click", toggle);
 
-  // Close on link click
   menu.querySelectorAll("a[href^='#']").forEach((a) => {
     a.addEventListener("click", () => {
       menu.classList.remove("is-open");
@@ -92,7 +99,8 @@ function setupForm() {
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    status.textContent = "Listo. Mensaje registrado. Te contactaremos por WhatsApp.";
+    status.textContent =
+      "Listo. Si quieres respuesta inmediata, usa el botón de WhatsApp.";
     form.reset();
   });
 }
